@@ -1,0 +1,23 @@
+Github...................
+
+git init -b main
+
+git add .
+
+git commit -m "First commit"
+
+git remote add origin https://github.com/Salluri777/Angular-Library-Project.git
+
+git push -u origin main
+
+
+
+Gitlab ........................................
+
+Push an existing folder
+cd existing_folder
+git init --initial-branch=main
+git remote add origin https://gitlab.com/SKalyan777/my-full-stack-projects.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main

@@ -1,0 +1,50 @@
+Angular docker image creation*********
+
+1) create the project
+
+2) ng build(dist folder will be created in your project)
+
+3)you can deploy alone this docker image in any of the server like tomcat,jboss,weblogic....
+
+4) Nowadays we are using open source nginix server
+
+5) Create a Dockerfile
+
+6)In dockerfile
+		FROM nginx
+		COPY static-html-directory /usr/share/nginx/html
+for my project -----> FROM nginx
+			    COPY ./dist/angularproject/ /usr/share/nginx/html
+
+7) Before creating the docker image pull nginx into docker(docker pull nginx)
+
+8)Image creation: docker build -t my-angular-project . -f Dockerfile
+
+9) for running docker image: docker run -d -p 80:80 my-angular-project ( second 80 is default you can change port number by changing the first)
+
+10) docker ps for knowing the details
+
+extra:
+in docker ps names are assigned randomly to our projects,in order to change that or customise name
+
+Run : docker run -d -p 81:80 --name my-angular-container my-angular-project
+
+*******************************************************
+
+PULLING AND PUSHING OUR DOCKER IMAGE TO OUR DOCKER HUB
+
+we will get the error. So before push please provide tag for that image 
+
+*****Run : docker tag imageName dockerhubaccountid/imageName:version 
+
+			docker tag my-angular-batch8 akashkale/my-angular-batch8:1.0
+
+
+1) docker push dockerhubaccountid/imageName:1.0
+ 		version is not mandatory if not mentioned it takes latest version
+
+2) docker pull akashkale/my-angular-batch8:1.0
+
+
+docker cheat sheet go to buddy works docker cheatsheet
+
