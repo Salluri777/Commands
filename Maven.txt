@@ -1,0 +1,13 @@
+*********angular script issue
+
+	Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+git pulling a repository
+
+	git clone git@github.com:username/repo.git
+
+***********
+
+Maven command used to create maven project through cmd
+
+1) mvn archetype:generate (total 3107 types 1917 core java id ****if we hit enter it will automatically takes core java project)
